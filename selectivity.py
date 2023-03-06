@@ -35,15 +35,15 @@ for i in range(len(molar_frac_1)):
                 arquivo.write("EwaldPrecision                   1e-6\n")
                 arquivo.write("\n")
                 arquivo.write("Framework                        0\n")
-                arquivo.write("FrameworkName                    sifsix-3-cu\n") #insert mof cif file name
+                arquivo.write("FrameworkName                    MOF\n") #insert mof cif file name
                 arquivo.write("UnitCells                        1 1 1\n")
-                arquivo.write("HeliumVoidFraction               0.32\n") #insert calculated he void fraction
-                arquivo.write("ExternalTemperature              300\n") #set simulation temperature
-                arquivo.write("ExternalPressure                 1.0e5\n") #set simulation pressur
+                arquivo.write("HeliumVoidFraction               0.XX\n") #insert calculated he void fraction
+                arquivo.write("ExternalTemperature              XXX\n") #set simulation temperature
+                arquivo.write("ExternalPressure                 XXXX\n") #set simulation pressur
                 arquivo.write("\n")
                 arquivo.write("UseChargesFromCIFFile            yes\n")
                 arquivo.write("\n")
-                arquivo.write(f"Component 0 MoleculeName         methane\n") #set component 0 
+                arquivo.write(f"Component 0 MoleculeName         molecule 1\n") #set component 0 
                 arquivo.write("             MoleculeDefinition   TraPPE\n")
                 arquivo.write(f"             MolFraction         {molar_frac_1[i]}\n")
                 arquivo.write("             TranslationProbability 0.5\n")
@@ -57,7 +57,7 @@ for i in range(len(molar_frac_1)):
                 arquivo.write("             SwapProbability           1.0\n")
                 arquivo.write("             CreateNumberOfMolecules   0\n")
                 arquivo.write("\n")
-                arquivo.write(f"Component 1 MoleculeName         ethane\n") #set component 1
+                arquivo.write(f"Component 1 MoleculeName         molecule 2\n") #set component 1
                 arquivo.write("             MoleculeDefinition   TraPPE\n")
                 arquivo.write(f"             MolFraction         {molar_frac_2[j]}\n")
                 arquivo.write("             TranslationProbability 1.0\n")
